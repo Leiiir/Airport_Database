@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>customer</title>
+    </head>
+
+    <style>
+        /* Bordered form */
+    form {
+    border: 3px solid #f1f1f1;
+    }
+
+    /* Full-width inputs */
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+
+    /* Set a style for all buttons */
+    button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    }
+
+    /* Add a hover effect for buttons */
+    button:hover {
+    opacity: 0.8;
+    }
+
+    /* Extra style for the cancel button (red) */
+    .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    }
+
+    /* Center the avatar image inside this container */
+    .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    }
+
+    /* Avatar image */
+    img.avatar {
+    width: 40%;
+    border-radius: 50%;
+    }
+
+    /* Add padding to containers */
+    .container {
+    padding: 16px;
+    }
+
+    /* The "Forgot password" text */
+    span.psw {
+    float: right;
+    padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+    }
+    </style>
+
+    <body> 
+        
+        <center><h1><p>Customer Page</p></h1></center>
+
+        <form class="form-group" action="{{ url_for('customer') }}" method="post">
+
+            <br>
+            <br>            
+            <button type="submit" name="Logout_customer" value="submit">Logout</button>
+
+            <br>
+            <br>
+            <center><h2><b>Search Flight by City</b></h2></center>
+            <div class="checkbox">
+                <center>
+                    <input type="text" placeholder="Which City" name="citytogo" >
+                </center>
+                <button type="submit" name="citysearch" value="submit">Search Flight by City</button>
+            </div>
+            
+            
+            <center><h2><b>Search All Flights by Condition</b></h2></center>
+            <div class="checkbox">
+                <center>
+                    <label><input type="checkbox" name="whichway" value="One-Way"> One-Way </label>
+                    <label><input type="checkbox" name="whichway" value="Round-Trip"> Round-Trip </label>
+                    <label><input type="checkbox" name="whichway" value="Multi-City"> Multi-City </label>
+                    <br>
+                    <label><input type="checkbox" name="travel" value="Domestic"> Domestic</label>
+                    <label><input type="checkbox" name="travel" value="International"> International</label>
+                </center>
+                    <button type="submit" name="search" value="submit">Search Flight</button>
+                    <!-- <button type="submit" name="reserve" value="submit">Reserve Tickets</button> -->
+            </div>
+
+            <center><h2><b>Check our Best-seller List of Flights HERE</b></h2></center>
+            <div class="checkbox">
+                <center>
+                    <button type="submit" name="bestseller" value="submit">Popular Flights</button>
+                </center>
+            </div>
+            
+            <center><h2><b>Cancel an Reservation</b></h2></center>
+            <div class="checkbox">
+                <center>
+                    <input type="text" placeholder="ENTER ur Reservation Number" name="cancelnum" >
+                    <button type="submit" name="cancelbutton" value="submit">Cancel</button>
+                </center>
+            </div>
+
+        </form>
+
+    </body>
+
+</html>
+
+
+
+
+
+

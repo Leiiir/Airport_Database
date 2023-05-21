@@ -1,0 +1,279 @@
+<html>
+    <head>
+        <title>manager</title>
+    </head>
+
+    <style>
+        /* Bordered form */
+    form {
+    border: 3px solid #f1f1f1;
+    }
+
+    /* Full-width inputs */
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+
+    /* Set a style for all buttons */
+    button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    }
+
+    /* Add a hover effect for buttons */
+    button:hover {
+    opacity: 0.8;
+    }
+
+    /* Extra style for the cancel button (red) */
+    .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    }
+
+    /* Center the avatar image inside this container */
+    .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    }
+
+    /* Avatar image */
+    img.avatar {
+    width: 40%;
+    border-radius: 50%;
+    }
+
+    /* Add padding to containers */
+    .container {
+    padding: 16px;
+    }
+
+    /* The "Forgot password" text */
+    span.psw {
+    float: right;
+    padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+    }
+    </style>
+
+    <body> 
+        
+        <center><h1><p>Manager Page</p></h1></center>
+
+        <form class="form-group" action="{{ url_for('manager') }}" method="post">
+            <br>
+            <br>            
+            <button type="submit" name="Logout" value="submit">Logout</button>
+
+            <br>
+            <br>
+            <br>
+
+            <label><b>Get Sales Report for Month (Period)</b></label>
+            <input type="text" placeholder="Start Date" name="startdate" >
+            <input type="text" placeholder="End Date" name="enddate" >
+            <button type="submit" name="searchbutton" value="submit">Search</button>
+
+            <br>
+            <br>
+            <br>
+
+            <label><b>Get comprehensive listing of all flights</b></label>
+            <button type="submit" name="allflights" value="submit">Search</button>
+            
+            <br>
+            <br>
+            <br>
+
+            <label><b>Add information for employee</b></label>
+            <input type="text" placeholder="SSN" name="SSN_Add_Update_information_for_employee" >
+            <input type="text" placeholder="Start_Date" name="Start_Date_Add_Update_information_for_employee" >
+            <input type="text" placeholder="Hourly_Rate" name="Hourly_Rate_Add_Update_information_for_employee" >
+            <button type="submit" name="Add_information_for_employee" value="submit">Add employee information </button>
+
+            <br>
+            <br>
+            <br>
+            <label><b>Update information for employee</b></label>
+            <input type="text" placeholder="SSN" name="SSN_Update_information_for_employee" >
+            <input type="text" placeholder="Hourly_Rate" name="Hourly_Rate_Update_information_for_employee" >
+            <button type="submit" name="Update_information_for_employee" value="submit">Update employee information</button>
+
+            <br>
+            <br>
+            <br>
+            <label><b>Delete information for employee</b></label>
+            <input type="text" placeholder="SSN" name="SSN_Delete_information_for_employee" >
+            <button type="submit" name="Delete_information_for_employee" value="submit">Delete employee information</button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <label><b>Add information for Customer</b></label>
+            <input type="text" placeholder="SSN" name="SSN_Add_information_for_Customer" >
+            <input type="text" placeholder="Email_Address" name="Email_Address_Add_information_for_Customer" >
+            <input type="text" placeholder="Credit_Card#" name="Credit_Card#_Add_information_for_Customer" >
+            <input type="text" placeholder="Account#" name="Account#_Add_information_for_Customer" >
+            <input type="text" placeholder="Preference" name="Preference_Add_information_for_Customer" >
+            <button type="submit" name="Add_information_for_Customer" value="submit">Add Customer information </button>
+
+
+            <br>
+            <br>
+            <br>
+            <label><b>Update information for Customer</b></label>
+            <input type="text" placeholder="Credit_Card#" name="Credit_Card#_Update_information_for_Customer" >
+            <input type="text" placeholder="Preference" name="Preference_Update_information_for_Customer" >
+            <button type="submit" name="Update_Customer_information" value="submit">Update Customer information</button>
+
+            <br>
+            <br>
+            <br>
+            <label><b>Delete information for Customer</b></label>
+            <input type="text" placeholder="Credit_Card#" name="Credit_Card#_Delete_information_for_Customer" >
+            <button type="submit" name="Delete_information_for_Customer" value="submit">Delete Customer information</button>
+            <br>
+            <br>
+            <br>
+
+            <label><b>List of reservations by flights number</b></label>
+            <input type="text" placeholder="flights number" name="List_of_reservations_by_flights_number" >
+            <button type="submit" name="reservations_by_flights_number" value="submit">List of reservations by flights number</button>
+
+            <br>
+            <br>
+            <br>
+            <label><b>List of reservations by flights customer name</b></label>
+            <input type="text" placeholder="Account#" name="List_of_reservations_by_Account" >
+            <button type="submit" name="reservations_by_customer_name" value="submit">List of reservations by customer name</button>            
+            <br>
+            <br>            
+            <br>
+
+
+            <label><b>Produce a summary listing of revenue generated by a particular flight</b></label>
+            <input type="text" placeholder="flight number" name="Summary_of_revenue_generated_by_a_particular_flight" >
+            <button type="submit" name="revenue_generated_by_a_particular_flight" value="submit">Search</button>  
+
+            <br>
+            <br>
+            <br>
+            
+            <label><b>Produce a summary listing of revenue generated by a particular Customer</b></label>
+            <input type="text" placeholder="flight number" name="Summary_of_revenue_generated_by_a_particular_Customer" >
+            <button type="submit" name="revenue_generated_by_a_particular_Customer" value="submit">Search</button>  
+
+
+
+            <br>
+            <br>         
+            <br>
+            <br>
+            <label><b>Determine which customer generated most total revenue</b></label>
+            <button type="submit" name="Determine_which_customer_generated_most_total_revenue" value="submit">Search</button>              
+            <br>
+            <br>
+            <br>
+
+            <label><b>Most Active Flight</b></label>
+            <button type="submit" name="Most_Active_Flight" value="submit">Search</button>   
+
+
+
+            <br>
+            <br>
+            <label><b>List of all customers who have seats reserved on a given flight</b></label>
+            <input type="text" placeholder="flight number" name="customers_who_have_seats_reserved_on_a_given_flight" >
+            <button type="submit" name="List_of_all_customers_who_have_seats_reserved_on_a_given_flight" value="submit">Search</button>  
+            <br>
+            <br>
+
+
+            <br>
+            <br>
+            <label><b>Produce a List of all flights for a given airport </b></label>
+            <input type="text" placeholder="Airport" name="List_of_all_flights_for_a_given_airport" >
+            <button type="submit" name="Produce_a_List_of_all_flights_for_a_given_airport" value="submit">Search</button>  
+            <br>
+            <br>
+            <br>            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>         
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>         
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>         
+            <br>
+            <br>
+            <br>
+            <br>             
+            <br>             
+        </form>
+
+    </body>
+
+</html>
+
+
+
+
+
+
